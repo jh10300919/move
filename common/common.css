@@ -1,0 +1,228 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+a {
+  color: black;
+  text-decoration: none;
+}
+
+:root {
+  --main-color1: #0c1336;
+  --main-color2: rgb(0, 255, 191);
+}
+
+body {
+  background-color: white;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid black;
+}
+
+#header,
+.gnb > li > a,
+.store > div > a {
+  color: white;
+}
+
+#header {
+  position: fixed;
+  z-index: 99;
+  width: 100vw;
+  height: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--main-color1);
+}
+
+#header .logo {
+  margin: 0 50px;
+}
+
+#header .logo p {
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+#header .logo p span {
+  font-size: 1vw;
+  margin-left: 5px;
+  font-weight: normal;
+}
+
+#header .gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1vw;
+}
+
+#header .gnb li {
+  margin: 0 25px;
+}
+
+#header .gnb li a {
+  font-weight: bold;
+  color: #a7a7a7;
+}
+
+#header .gnb li a:hover {
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: white;
+}
+
+#header .store {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 50px;
+}
+
+#header .store div {
+  margin: 0 5px;
+  position: relative;
+  border: 1px solid white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .store div .fab {
+  font-size: 25px;
+}
+
+#header .store div a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  border-radius: 50px;
+}
+
+#header .store div a:hover {
+  background-color: rgba(255, 255, 255, 0.123);
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.main {
+  border: 1px solid red;
+  position: fixed;
+  z-index: -99;
+  background-color: var(--main-color1);
+  color: white;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main article {
+  border: 1px solid red;
+  display: inline-block;
+}
+
+.main article h1 {
+  font-size: 1.3vw;
+  color: var(--main-color2);
+}
+
+.main article p {
+  margin-top: 1vw;
+  font-size: 3vw;
+  line-height: 3.5vw;
+}
+
+.main article p:nth-of-type(2) {
+  margin-top: 1vw;
+  font-size: 1vw;
+  line-height: 1.2vw;
+  color: #8385a8;
+}
+
+.main article .car {
+  width: 95%;
+  margin: auto;
+  border: 1px solid blue;
+  margin-top: 3vw;
+  height: 20vw;
+}
+
+.main article .car .txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main article .car .txt li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main article .car .txt li .tt {
+  color: var(--main-color2);
+  font-size: 0.9vw;
+}
+
+.main article .car .txt li .td {
+  margin-top: 5px;
+  font-size: 1vw;
+}
+
+.main article .car .carbody {
+  border: 1px solid red;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.main article .car .carbody img {
+  border: 1px solid white;
+  position: absolute;
+  bottom: 0;
+}
+
+.main article .car .wheel {
+  position: absolute;
+  width: 7vw;
+}
+/*# sourceMappingURL=common.css.map */
