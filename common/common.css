@@ -11,7 +11,7 @@ a {
 }
 
 body {
-  background-color: white;
+  white-space: nowrap;
 }
 
 section {
@@ -27,6 +27,7 @@ section {
 }
 
 #header {
+  border: 1px solid red;
   position: fixed;
   z-index: 99;
   width: 100vw;
@@ -45,6 +46,7 @@ section {
 
 #header .logo {
   margin: 0 50px;
+  white-space: nowrap;
 }
 
 #header .logo p {
@@ -174,9 +176,9 @@ section {
 .main article .car {
   width: 95%;
   margin: auto;
-  border: 1px solid blue;
   margin-top: 3vw;
   height: 20vw;
+  position: relative;
 }
 
 .main article .car .txt {
@@ -208,21 +210,61 @@ section {
   font-size: 1vw;
 }
 
-.main article .car .carbody {
-  border: 1px solid red;
+.main article .car .car_car {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main article .car .car_car .carbody {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.main article .car .carbody img {
-  border: 1px solid white;
+.main article .car .car_car .carbody img {
   position: absolute;
   bottom: 0;
 }
 
-.main article .car .wheel {
+.main article .car .car_car .wheel {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.main article .car .car_car .wheel img {
   position: absolute;
-  width: 7vw;
+  width: 18%;
+  bottom: 0;
+  -webkit-animation: spin infinite linear 5s;
+          animation: spin infinite linear 5s;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+.main article .car .car_car .F {
+  position: absolute;
+  left: 10%;
+}
+
+.main article .car .car_car .B {
+  position: absolute;
+  left: 70%;
 }
 /*# sourceMappingURL=common.css.map */
