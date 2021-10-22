@@ -27,7 +27,6 @@ section {
 }
 
 #header {
-  border: 1px solid red;
   position: fixed;
   z-index: 99;
   width: 100vw;
@@ -133,7 +132,8 @@ section {
 }
 
 .main {
-  border: 1px solid red;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   z-index: -99;
   background-color: var(--main-color1);
@@ -148,11 +148,6 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.main article {
-  border: 1px solid red;
-  display: inline-block;
 }
 
 .main article h1 {
@@ -208,6 +203,17 @@ section {
 .main article .car .txt li .td {
   margin-top: 5px;
   font-size: 1vw;
+  position: relative;
+}
+
+.main article .car .txt li .td::after {
+  position: absolute;
+  left: 0;
+  bottom: -1150%;
+  content: "";
+  border-left: 1px solid #4d4d4d;
+  width: 1px;
+  height: 10vw;
 }
 
 .main article .car .car_car {
@@ -220,8 +226,10 @@ section {
 
 .main article .car .car_car .carbody {
   position: relative;
-  width: 100%;
+  width: 120%;
   height: 100%;
+  left: -10%;
+  bottom: -15%;
 }
 
 .main article .car .car_car .carbody img {
@@ -233,12 +241,12 @@ section {
   width: 100%;
   height: 100%;
   left: 0;
-  top: 0;
+  top: 10%;
 }
 
 .main article .car .car_car .wheel img {
   position: absolute;
-  width: 18%;
+  width: 20%;
   bottom: 0;
   -webkit-animation: spin infinite linear 5s;
           animation: spin infinite linear 5s;
@@ -260,11 +268,118 @@ section {
 
 .main article .car .car_car .F {
   position: absolute;
-  left: 10%;
+  left: 3%;
 }
 
 .main article .car .car_car .B {
   position: absolute;
-  left: 70%;
+  left: 75%;
+}
+
+.main article .bg1,
+.main article .bg2,
+.main article .bg3,
+.main article .bg4 {
+  position: absolute;
+  border: 5px solid red;
+  height: 10vw;
+  width: 100%;
+  z-index: -1;
+  top: 30%;
+  opacity: 0.05;
+  background: url(./img/bg.svg) repeat;
+  background-size: contain;
+}
+
+.main article .bg1 {
+  left: 0;
+}
+
+.main article .bg2 {
+  left: 100%;
+}
+
+.main article .bg3 {
+  top: 20%;
+  left: 0;
+  opacity: 0.03;
+}
+
+.main article .bg4 {
+  top: 20%;
+  left: 100%;
+  opacity: 0.03;
+}
+
+@-webkit-keyframes move1 {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes move1 {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes move2 {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes move2 {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@-webkit-keyframes move3 {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes move3 {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes move4 {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes move4 {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
 }
 /*# sourceMappingURL=common.css.map */
